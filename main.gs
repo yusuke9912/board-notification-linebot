@@ -1,8 +1,8 @@
-const CHANNEL_ACCESS_TOKEN = "";
-const spreadsheet = SpreadsheetApp.openById('');
+const CHANNEL_ACCESS_TOKEN = "ulGY463iLVICaElTQfXIPkumceiXIcaCF+otRAwqiDCm+dgRp2bEqec97HngY/ANHL4f46BYGmvsPXL8gNs3ieaIplWmmE0vIEqyj2MisblH2aWknXImGmXTE2lyHjhflYYUtudoSFH0M//OEONYuwdB04t89/1O/w1cDnyilFU=";
+const spreadsheet = SpreadsheetApp.openById('1VHqDixjNFWooPXxiB1uzC-e2INVSwVCk6KPJW82lvbM');
 const url = 'https://api.line.me/v2/bot/message/broadcast';
-const url2 = '';
-const requestUrl = '';
+const url2 = 'https://student:CivilEng21@board.civil.kyushu-u.ac.jp';
+const requestUrl = 'https://node2.feed43.com/5558745471761436.xml';
 const categories = ["講義", "試験", "レポート", "一般", "就職"];
 const colors = ['#008080', '#cd5c5c', '#6b8e23', '#ff8c00', '#4169e1'];
 
@@ -32,9 +32,9 @@ function doPost(e) {
        }
     }
     
-for(let i = 19; i >=0; i--){
+for(let i = 10; i >=0; i--){
         let link = entries[i].getChildText("link");
-        let art_num = entries[i].getChildText("link").replace(url2 + '/ja/detail.php?id=', '').replace('&c=3', '');
+        let art_num = entries[i].getChildText("link").replace(url2 + '/ja/detail.php?id=', '').replace('&c=2', '');
         let category_num = entries[i].getChildText("description").charAt(0);
         let title = entries[i].getChildText("title");
         
